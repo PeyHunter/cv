@@ -1,0 +1,150 @@
+/* Inlined into the HTML by cv.typ. Matches peytonhunter.com: black, Bricolage + Jakarta + Reddit Mono. */
+:root {
+  --bg: #000;
+  --fg: #fff;
+  --muted: rgba(255, 255, 255, 0.6);
+  --faint: rgba(255, 255, 255, 0.1);
+  --card: rgba(255, 255, 255, 0.04);
+  --accent: #60a5fa;
+  --heading: "Bricolage Grotesque", system-ui, sans-serif;
+  --body: "Plus Jakarta Sans", system-ui, sans-serif;
+  --mono: "Reddit Mono", ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--bg); color: var(--fg); }
+
+body {
+  margin: 0;
+  font: 400 16px/1.6 var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.cv {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 96px 16px 64px;
+}
+
+a { color: inherit; text-decoration-color: var(--faint); text-underline-offset: 3px; }
+a:hover { color: var(--accent); text-decoration-color: currentColor; }
+
+/* ---------- header ---------- */
+.status {
+  font: 500 13px/1 var(--mono);
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 16px;
+}
+.status::before { content: "● "; }
+
+h1 {
+  font: 800 clamp(48px, 11vw, 96px)/0.9 var(--heading);
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.role { color: var(--muted); font-size: 18px; margin: 16px 0 20px; }
+
+.contact {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  padding: 0;
+  margin: 0 0 28px;
+  font: 400 14px/1.4 var(--mono);
+}
+
+.download {
+  display: inline-block;
+  font: 600 14px/1 var(--mono);
+  text-decoration: none;
+  padding: 12px 18px;
+  border: 1px solid var(--fg);
+  border-radius: 999px;
+}
+.download:hover { background: var(--fg); color: var(--bg); }
+
+/* ---------- sections ---------- */
+section { margin-top: 64px; }
+
+h2 {
+  font: 700 13px/1 var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--faint);
+}
+
+h3 { font: 700 20px/1.25 var(--heading); margin: 0; }
+
+.summary { font-size: 18px; margin: 0; }
+
+.when { font: 400 13px/1.5 var(--mono); color: var(--muted); margin: 0; }
+
+.entry {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 4px 24px;
+  margin-bottom: 28px;
+}
+.entry .org { color: var(--muted); margin: 2px 0 8px; }
+.entry ul { margin: 0; padding-left: 18px; }
+.entry li { margin-bottom: 4px; }
+.entry li::marker { color: var(--accent); }
+
+.project {
+  background: var(--card);
+  border: 1px solid var(--faint);
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin-bottom: 14px;
+}
+.project-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.project p { margin: 8px 0 12px; color: rgba(255, 255, 255, 0.85); }
+
+.tags { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0; }
+.tags li {
+  font: 400 12px/1 var(--mono);
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--faint);
+  color: var(--muted);
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 10px 24px;
+  margin: 0;
+}
+.skills dt { font-weight: 700; }
+.skills dd { margin: 0; color: rgba(255, 255, 255, 0.85); }
+
+footer {
+  margin-top: 80px;
+  padding-top: 20px;
+  border-top: 1px solid var(--faint);
+  font: 400 12px/1.5 var(--mono);
+  color: var(--muted);
+}
+
+/* ---------- phones ---------- */
+@media (max-width: 600px) {
+  .cv { padding-top: 56px; }
+  .entry, .skills { grid-template-columns: 1fr; }
+  .skills dd { margin-bottom: 8px; }
+}
+
+/* ---------- printing the web page ---------- */
+@media print {
+  :root { --bg: #fff; --fg: #000; --muted: #555; --faint: #ddd; --card: transparent; --accent: #2563eb; }
+  .cv { padding: 0; }
+  .download { display: none; }
+  .project { break-inside: avoid; }
+}

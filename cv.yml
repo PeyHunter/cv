@@ -1,0 +1,96 @@
+# ------------------------------------------------------------
+# Your CV content. Edit this file, then cut a release.
+# cv.typ turns it into cv.html (the website) and cv.pdf.
+#
+# Lines marked TODO need your real details. An empty list
+# hides its section, so nothing half-done goes online.
+# ------------------------------------------------------------
+
+name: Peyton Hunter
+role: Full-Stack Developer
+location: Copenhagen, Denmark # TODO: check
+status: Open to internships and junior roles
+
+contact:
+  email: nando.goat@gmail.com
+  phone: "+45 22 11 32 31"
+  website: peytonhunter.com
+  github: PeyHunter
+  linkedin: "" # TODO: e.g. peyton-hunter (the part after linkedin.com/in/)
+
+summary: >-
+  Computer Science student at EK (formerly KEA) looking for an internship.
+  I build full-stack apps with Java, Spring Boot and MySQL, and keep my
+  frontends clean with React and Tailwind. Lately I've gone deep on DevOps:
+  I run my own Kubernetes (k3s) cluster with GitOps, CI/CD and automatic
+  HTTPS, and I'm adding Python and AI automation to my toolbox.
+
+# Newest first. Copy a block to add a job.
+experience: []
+#  - title: Job title
+#    org: Company name
+#    place: Copenhagen
+#    start: 2026-08
+#    end: present
+#    points:
+#      - What you built or improved, with a result if you have one.
+#      - Tools you used.
+
+education:
+  - title: AP Degree in Computer Science (Datamatiker)
+    org: Copenhagen School of Design and Technology (EK, formerly KEA)
+    place: Copenhagen
+    start: 2024-08 # TODO: check
+    end: 2027-01 (expected) # TODO: check
+    points:
+      - Java, Spring Boot, JPA, MySQL, JavaScript, system development and Scrum.
+      - "Electives: Introduction to Python; AI Agents and Automation (n8n)."
+
+projects:
+  - name: k3s Cluster
+    link: https://github.com/PeyHunter/k3s-gitOps
+    year: 2026
+    tech: [k3s, Argo CD, GitHub Actions, cert-manager, external-dns, Cloudflare]
+    text: >-
+      Set up a single-node Kubernetes cluster by hand on my own VPS. A push to
+      GitHub builds a container image, Argo CD syncs it to the cluster, and
+      cert-manager and external-dns handle HTTPS and DNS. It hosts
+      peytonhunter.com and this CV.
+  - name: NoteHelper
+    link: https://github.com/PeyHunter/Backend_NoteHelper
+    year: 2026
+    tech: [Java, Spring Boot, OpenAI API, Docker, GitHub Actions]
+    text: >-
+      Upload lecture slides as PDF or text and get structured notes,
+      deeper explanations and a quiz, generated through the OpenAI API.
+  - name: Soundwave Arena
+    link: https://github.com/Krymmel-Kaemperne/soundwave-backend
+    year: 2025
+    tech: [Java, Spring Boot, JPA, MySQL, JavaScript]
+    text: >-
+      Full-stack web app built by a team of four working in Scrum, with
+      GitHub Actions automating tests and deployment before every merge.
+  - name: n8n Workflow Backup
+    link: https://github.com/PeyHunter/n8n-backup
+    year: 2026
+    tech: [n8n, Docker, GitHub API]
+    text: >-
+      An n8n workflow that backs up all my automations to GitHub as JSON,
+      so every change is versioned and easy to restore.
+
+skills:
+  - group: Languages
+    items: [Java, JavaScript, Python, SQL, HTML, CSS]
+  - group: Frameworks
+    items: [Spring Boot, JPA, React, Tailwind, Bootstrap]
+  - group: DevOps
+    items: [Kubernetes (k3s), Argo CD, Docker, GitHub Actions, Linux, Git]
+  - group: Testing and AI
+    items: [JUnit, Playwright, n8n, OpenAI API]
+
+# Spoken languages. Empty hides the section.
+languages: []
+#  - name: English
+#    level: Native
+#  - name: Danish
+#    level: Fluent
