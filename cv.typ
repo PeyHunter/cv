@@ -65,6 +65,8 @@
     html.elem("meta", attrs: (charset: "utf-8"))
     html.elem("meta", attrs: (name: "viewport", content: "width=device-width, initial-scale=1"))
     el("title", cv.name + " · CV")
+    // Same plain black box as peytonhunter.com, inlined so cv.html works on its own
+    html.elem("link", attrs: (rel: "icon", type: "image/svg+xml", href: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3C/svg%3E"))
     html.elem("meta", attrs: (name: "description", content: cv.name + ", " + cv.role + ". " + cv.status + "."))
     html.elem("link", attrs: (rel: "preconnect", href: "https://fonts.googleapis.com"))
     html.elem("link", attrs: (rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: ""))
