@@ -134,11 +134,12 @@
 #let mono-font = "Reddit Mono"
 
 #let pdf-section(title, body) = {
-  v(9pt)
-  text(font: heading-font, weight: 700, size: 12pt, title)
-  v(-4pt)
-  line(length: 100%, stroke: 0.5pt + muted.lighten(50%))
-  v(1pt)
+  // sticky: never leave a heading alone at the bottom of a page
+  block(sticky: true, above: 12pt, below: 6pt, {
+    text(font: heading-font, weight: 700, size: 12pt, title)
+    v(-4pt)
+    line(length: 100%, stroke: 0.5pt + muted.lighten(50%))
+  })
   body
 }
 
@@ -164,6 +165,8 @@
   set par(leading: 0.55em, spacing: 0.8em)
   set list(indent: 0pt, body-indent: 5pt, spacing: 0.45em, marker: text(fill: accent, "–"))
   show link: set text(fill: ink)
+  // Every entry is a grid: keep each one on a single page
+  show grid: it => block(breakable: false, it)
 
   // Header
   text(font: mono-font, size: 8pt, fill: accent, upper(cv.status))

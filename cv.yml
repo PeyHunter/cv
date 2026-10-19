@@ -9,7 +9,7 @@
 name: Peyton Hunter
 role: Full-Stack Developer
 location: Copenhagen, Denmark # TODO: check
-status: Open to internships and junior roles
+status: Open to job opportunities
 
 contact:
   email: nando.goat@gmail.com
@@ -19,24 +19,56 @@ contact:
   linkedin: "" # TODO: e.g. peyton-hunter (the part after linkedin.com/in/)
 
 summary: >-
-  Computer Science (Datamatiker) student at EK (formerly KEA), looking for an
-  internship. I have a strong passion for object-oriented programming and
+  Computer Science (Datamatiker) student at EK (formerly KEA), looking for job
+  opportunities. I have a strong passion for object-oriented programming and
   hands-on experience with Java, Spring Boot and MySQL, plus frontend work in
-  JavaScript and React, which I started with the SheCodes course in 2022.
-  Lately I've gone deep on DevOps: I run my own Kubernetes (k3s) cluster with
-  GitOps, CI/CD and automatic HTTPS. Right now I'm expanding my skills with
-  Python and AI automation.
+  JavaScript and React. As an AI intern at Droids Agency I work with agentic
+  Playwright testing, AI workflows and Kubernetes, and I run my own k3s
+  cluster with GitOps and CI/CD. Before coding I spent years as a graphic
+  designer, so I care about how things look and feel, not just how they work.
 
 # Newest first. Copy a block to add a job.
-experience: []
-#  - title: Job title
-#    org: Company name
-#    place: Copenhagen
-#    start: 2026-08
-#    end: present
-#    points:
-#      - What you built or improved, with a result if you have one.
-#      - Tools you used.
+experience:
+  - title: AI Intern
+    org: Droids Agency
+    place: Copenhagen
+    start: 2026-08
+    end: 2026-11
+    points:
+      - Test automation with agentic Playwright.
+      - Building AI workflows.
+      - Working with Kubernetes.
+  - title: Freelance Graphic Designer
+    org: Self-employed
+    place: Copenhagen
+    start: 2018-11
+    end: present
+    points:
+      - "Academy for Socially Engaged Youth (ASU): website design, visual identity and workshop design; external teacher in branding."
+      - "Verdensmål i Hænderne: visual identity, social media guidelines and workshop design; external branding teacher for students at FGU Køge."
+      - "SOPRA, the Danish Social Services Agency (2021, 2022)."
+  - title: Graphic Designer
+    org: Unknown Agency (creative agency)
+    place: Copenhagen
+    start: 2020
+    end: 2022
+    points:
+      - Client presentations, packaging design and illustration for clients including Wolt, SunQuick and Pelican Storage.
+  - title: Graphic Designer
+    org: WAWA
+    place: Copenhagen
+    start: 2018-11
+    end: 2019-03
+    points:
+      - Social media content, ads, brand campaigns and visual identity.
+      - Newsletters, stock updates, and design and launch of new collections.
+  - title: Graphic Design Intern
+    org: Design Bridge (creative agency)
+    place: Amsterdam
+    start: 2018-11 # TODO: check dates
+    end: 2019-01
+    points:
+      - Packaging design, layout, concept development and implementation for major brands such as Toblerone.
 
 education:
   - title: AP Degree in Computer Science (Datamatiker)
@@ -47,13 +79,13 @@ education:
     points:
       - Java, Spring Boot, JPA, MySQL, JavaScript, system development and Scrum.
       - "Electives: Introduction to Python; AI Agents and Automation (n8n)."
-  - title: SheCodes frontend development course
-    org: SheCodes
-    place: Online
-    start: 2022
-    end: 2022
+  - title: Frontend development course
+    org: SheCodes (online)
+    place: Copenhagen
+    start: 2022-12
+    end: 2023-06
     points:
-      - HTML, CSS, JavaScript and React; built weather, world clock and dictionary apps.
+      - HTML, CSS, JavaScript, working with APIs, Bootstrap and React.
 
 projects:
   - name: k3s Cluster
@@ -98,6 +130,8 @@ skills:
     items: [JUnit, Playwright, n8n, OpenAI API]
   - group: Ways of working
     items: [Object-oriented programming, Scrum, Jira]
+  - group: Design
+    items: [Visual identity, Branding, Packaging design, Illustration, Workshop design]
 
 # Spoken languages. Empty hides the section.
 languages: []
