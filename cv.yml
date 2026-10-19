@@ -19,11 +19,13 @@ contact:
   linkedin: "" # TODO: e.g. peyton-hunter (the part after linkedin.com/in/)
 
 summary: >-
-  Computer Science student at EK (formerly KEA) looking for an internship.
-  I build full-stack apps with Java, Spring Boot and MySQL, and keep my
-  frontends clean with React and Tailwind. Lately I've gone deep on DevOps:
-  I run my own Kubernetes (k3s) cluster with GitOps, CI/CD and automatic
-  HTTPS, and I'm adding Python and AI automation to my toolbox.
+  Computer Science (Datamatiker) student at EK (formerly KEA), looking for an
+  internship. I have a strong passion for object-oriented programming and
+  hands-on experience with Java, Spring Boot and MySQL, plus frontend work in
+  JavaScript and React, which I started with the SheCodes course in 2022.
+  Lately I've gone deep on DevOps: I run my own Kubernetes (k3s) cluster with
+  GitOps, CI/CD and automatic HTTPS. Right now I'm expanding my skills with
+  Python and AI automation.
 
 # Newest first. Copy a block to add a job.
 experience: []
@@ -45,6 +47,13 @@ education:
     points:
       - Java, Spring Boot, JPA, MySQL, JavaScript, system development and Scrum.
       - "Electives: Introduction to Python; AI Agents and Automation (n8n)."
+  - title: SheCodes frontend development course
+    org: SheCodes
+    place: Online
+    start: 2022
+    end: 2022
+    points:
+      - HTML, CSS, JavaScript and React; built weather, world clock and dictionary apps.
 
 projects:
   - name: k3s Cluster
@@ -87,6 +96,8 @@ skills:
     items: [Kubernetes (k3s), Argo CD, Docker, GitHub Actions, Linux, Git]
   - group: Testing and AI
     items: [JUnit, Playwright, n8n, OpenAI API]
+  - group: Ways of working
+    items: [Object-oriented programming, Scrum, Jira]
 
 # Spoken languages. Empty hides the section.
 languages: []

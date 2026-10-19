@@ -16,12 +16,12 @@
 #let fmt-date(d) = {
   let d = str(d)
   let m = d.match(regex("^(\d{4})-(\d{2})(.*)$"))
-  if m == none { return d.at(0, default: "").upper() + d.slice(calc.min(1, d.len())) }
+  if m == none { return if d == "" { d } else { upper(d.first()) + d.slice(d.first().len()) } }
   let (year, month, rest) = m.captures
   months.at(int(month) - 1) + " " + year + rest
 }
 
-#let when(e) = fmt-date(e.start) + " – " + fmt-date(e.end)
+#let when(e) = if str(e.start) == str(e.end) { fmt-date(e.start) } else { fmt-date(e.start) + " – " + fmt-date(e.end) }
 #let at-place(e) = (e.org, e.at("place", default: none)).filter(x => x not in (none, "")).join(" · ")
 
 // Contact links as (label, href) pairs, skipping empty ones.
