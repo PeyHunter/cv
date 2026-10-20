@@ -61,11 +61,13 @@ education:
       - "Electives: Introduction to Python; AI Agents and Automation (n8n)."
 
 courses:
-  - title: Python course
+  - title: Python course (Basics, Advanced and AI workshops)
     org: SheCodes (online)
     place: Copenhagen
     start: "" # TODO: add dates, e.g. 2023-09
     end: ""
+    points:
+      - "Python fundamentals, external packages, working with APIs, CSV files, object-oriented programming, data visualization and AI APIs."
   - title: Frontend development course
     org: SheCodes (online)
     place: Copenhagen
