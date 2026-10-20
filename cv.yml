@@ -20,11 +20,11 @@ contact:
 
 summary: >-
   Computer Science (Datamatiker) student at EK (formerly KEA), looking for job
-  opportunities. I have a strong passion for object-oriented programming and
-  hands-on experience with Java, Spring Boot and MySQL, plus frontend work in
-  JavaScript and React. As an AI intern at Droids Agency I work with agentic
-  Playwright testing, AI workflows and Kubernetes, and I run my own k3s
-  cluster with GitOps and CI/CD. Before coding I spent years as a graphic
+  opportunities. Hands-on experience with Java, Spring Boot and MySQL, plus
+  frontend work in JavaScript and React. As an AI intern at Droids Agency I
+  bootstrapped a Kubernetes cluster with Argo CD, cert-manager and
+  external-dns, helped build an OCR pipeline, and work with agentic Playwright
+  testing and AI workflows. I also run my own k3s cluster with GitOps and CI/CD. Before coding I spent years as a graphic
   designer, so I care about how things look and feel, not just how they work.
 
 # Newest first. Copy a block to add a job.
@@ -35,9 +35,10 @@ experience:
     start: 2026-08
     end: 2026-11
     points:
+      - "Bootstrapped a Kubernetes cluster with Argo CD (GitOps), cert-manager (automatic TLS certificates) and external-dns (automatic DNS records)."
+      - Helped build an OCR pipeline.
       - Test automation with agentic Playwright.
       - Building AI workflows.
-      - Working with Kubernetes.
   - title: Freelance Graphic Designer
     org: Self-employed
     place: Copenhagen
@@ -125,7 +126,7 @@ skills:
   - group: Frameworks
     items: [Spring Boot, JPA, React, Tailwind, Bootstrap]
   - group: DevOps
-    items: [Kubernetes (k3s), Argo CD, Docker, GitHub Actions, Linux, Git]
+    items: [Kubernetes (k3s), Argo CD, cert-manager, external-dns, Docker, GitHub Actions, Linux, Git]
   - group: Testing and AI
     items: [JUnit, Playwright, n8n, OpenAI API]
   - group: Ways of working
