@@ -28,7 +28,17 @@ summary: >-
   designer, so I care about how things look and feel, not just how they work.
 
 # Newest first. Copy a block to add a job.
+# Section order on the CV: experience, education, courses, design, projects, skills.
 experience:
+  - title: "Final degree project: Surft BYOD"
+    org: Copenhagen School of Design and Technology (EK)
+    place: Copenhagen
+    start: 2026-11
+    end: 2027-01 (expected)
+    points:
+      - "Building BYOD (Bring Your Own Domain) for Surft, a hosting platform: one click or API call registers a domain, sets up email and publishes an HTTPS landing page."
+      - "Replacing External-DNS and cert-manager with Zonekeeper and Certkeeper, which keep DNS records and certificates in PostgreSQL, so thousands of domains don't hit Cloudflare's rate limit or fill up etcd."
+      - Node.js services on Kubernetes, a PostgreSQL job queue, and an MCP server so AI assistants like Claude can use the platform.
   - title: AI Intern
     org: Droids Agency
     place: Copenhagen
@@ -39,6 +49,33 @@ experience:
       - Helped build an OCR pipeline.
       - Test automation with agentic Playwright.
       - Building AI workflows.
+
+education:
+  - title: AP Degree in Computer Science (Datamatiker)
+    org: Copenhagen School of Design and Technology (EK, formerly KEA)
+    place: Copenhagen
+    start: 2024-08 # TODO: check
+    end: 2027-01 (expected) # TODO: check
+    points:
+      - Java, Spring Boot, JPA, MySQL, JavaScript, system development and Scrum.
+      - "Electives: Introduction to Python; AI Agents and Automation (n8n)."
+
+courses:
+  - title: Python course
+    org: SheCodes (online)
+    place: Copenhagen
+    start: "" # TODO: add dates, e.g. 2023-09
+    end: ""
+  - title: Frontend development course
+    org: SheCodes (online)
+    place: Copenhagen
+    start: 2022-12
+    end: 2023-06
+    points:
+      - HTML, CSS, JavaScript, working with APIs, Bootstrap and React.
+
+# Graphic design work, newest first.
+design:
   - title: Freelance Graphic Designer
     org: Self-employed
     place: Copenhagen
@@ -70,23 +107,6 @@ experience:
     end: 2019-01
     points:
       - Packaging design, layout, concept development and implementation for major brands such as Toblerone.
-
-education:
-  - title: AP Degree in Computer Science (Datamatiker)
-    org: Copenhagen School of Design and Technology (EK, formerly KEA)
-    place: Copenhagen
-    start: 2024-08 # TODO: check
-    end: 2027-01 (expected) # TODO: check
-    points:
-      - Java, Spring Boot, JPA, MySQL, JavaScript, system development and Scrum.
-      - "Electives: Introduction to Python; AI Agents and Automation (n8n)."
-  - title: Frontend development course
-    org: SheCodes (online)
-    place: Copenhagen
-    start: 2022-12
-    end: 2023-06
-    points:
-      - HTML, CSS, JavaScript, working with APIs, Bootstrap and React.
 
 projects:
   - name: k3s Cluster

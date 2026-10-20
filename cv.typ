@@ -24,6 +24,15 @@
 #let when(e) = if str(e.start) == str(e.end) { fmt-date(e.start) } else { fmt-date(e.start) + " – " + fmt-date(e.end) }
 #let at-place(e) = (e.org, e.at("place", default: none)).filter(x => x not in (none, "")).join(" · ")
 
+// Sections made of dated entries, in the order they appear: (cv.yml key, heading).
+// Projects and skills come after these.
+#let entry-sections = (
+  ("experience", "Experience"),
+  ("education", "Education"),
+  ("courses", "Courses"),
+  ("design", "Graphic design"),
+).filter(((key, _)) => cv.at(key, default: ()).len() > 0)
+
 // Contact links as (label, href) pairs, skipping empty ones.
 #let contact-links = {
   let c = cv.contact
@@ -85,8 +94,8 @@
 
     html-section("about", "About", el("p", class: "summary", cv.summary))
 
-    if cv.experience.len() > 0 {
-      html-section("experience", "Experience", cv.experience.map(html-entry).join())
+    for (key, title) in entry-sections {
+      html-section(key, title, cv.at(key).map(html-entry).join())
     }
 
     if cv.projects.len() > 0 {
@@ -98,10 +107,6 @@
         el("p", p.text)
         el("ul", class: "tags", p.tech.map(t => el("li", t)).join())
       })).join())
-    }
-
-    if cv.education.len() > 0 {
-      html-section("education", "Education", cv.education.map(html-entry).join())
     }
 
     html-section("skills", "Skills", el("dl", class: "skills", cv.skills.map(s => {
@@ -181,8 +186,8 @@
 
   pdf-section("About", par(cv.summary))
 
-  if cv.experience.len() > 0 {
-    pdf-section("Experience", stack(spacing: 7pt, ..cv.experience.map(pdf-entry)))
+  for (key, title) in entry-sections {
+    pdf-section(title, stack(spacing: 7pt, ..cv.at(key).map(pdf-entry)))
   }
 
   if cv.projects.len() > 0 {
@@ -198,10 +203,6 @@
         p.text
       },
     ))))
-  }
-
-  if cv.education.len() > 0 {
-    pdf-section("Education", stack(spacing: 7pt, ..cv.education.map(pdf-entry)))
   }
 
   let pairs(rows) = grid(
