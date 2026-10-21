@@ -19,26 +19,29 @@ contact:
   linkedin: "" # TODO: e.g. peyton-hunter (the part after linkedin.com/in/)
 
 summary: >-
-  Computer Science (Datamatiker) student at EK (formerly KEA), looking for job
-  opportunities. Hands-on experience with Java, Spring Boot and MySQL, plus
-  frontend work in JavaScript and React. As an AI intern at Droids Agency I
-  bootstrapped a Kubernetes cluster with Argo CD, cert-manager and
-  external-dns, helped build an OCR pipeline, and work with agentic Playwright
-  testing and AI workflows. I also run my own k3s cluster with GitOps and CI/CD. Before coding I spent years as a graphic
-  designer, so I care about how things look and feel, not just how they work.
+  Computer Science (Datamatiker) student at EK, looking for job opportunities.
+  As an AI intern at Droids Agency I bootstrapped a Kubernetes cluster with
+  Argo CD, cert-manager and external-dns. I also helped build an OCR pipeline
+  on Kubernetes, where I made the accuracy benchmarks and the local k3s deploy
+  workflow. I work with agentic Playwright testing and AI workflows, and run
+  my own k3s cluster with GitOps and CI/CD. Hands-on experience with Java, Spring Boot and
+  MySQL, plus frontend work in JavaScript, React and Tailwind. Before coding I
+  spent years as a graphic designer, so I care about how things look and feel,
+  not just how they work.
 
 # Newest first. Copy a block to add a job.
-# Section order on the CV: experience, education, courses, design, projects, skills.
+# Section order on the CV: experience, education, courses, design, volunteer, projects, skills.
 experience:
-  - title: "Final degree project: Surft BYOD"
+  - title: "Final degree project: KAOS"
     org: Copenhagen School of Design and Technology (EK)
     place: Copenhagen
     start: 2026-11
     end: 2027-01 (expected)
     points:
-      - "Building BYOD (Bring Your Own Domain) for Surft, a hosting platform: one click or API call registers a domain, sets up email and publishes an HTTPS landing page."
-      - "Replacing External-DNS and cert-manager with Zonekeeper and Certkeeper, which keep DNS records and certificates in PostgreSQL, so thousands of domains don't hit Cloudflare's rate limit or fill up etcd."
-      - Node.js services on Kubernetes, a PostgreSQL job queue, and an MCP server so AI assistants like Claude can use the platform.
+      - "Building KAOS, an AI agent that runs as a Kubernetes operator and watches the cluster. When something breaks, it finds the cause and either fixes it itself or proposes a fix for a human to approve."
+      - "It is woken by a schedule, an Alertmanager alert or a person, then reads logs (Loki), metrics (Prometheus) and what changed in the cluster (Pickle, cluster snapshots in Git)."
+      - "Its memory is incidental, an event-sourced incident system in Rust and PostgreSQL (CloudNativePG). It groups repeat errors by signature, stores each guess at a cause with a confidence level and evidence, and tracks whether a fix stopped the error coming back."
+      - "A policy lists the fixes the agent may make on its own. The project tests the agent's prompts and workflows so more fixes can safely move onto that list. Deployed with Helm, Nix and Argo CD."
   - title: AI Intern
     org: Droids Agency
     place: Copenhagen
@@ -46,7 +49,10 @@ experience:
     end: 2026-11
     points:
       - "Bootstrapped a Kubernetes cluster with Argo CD (GitOps), cert-manager (automatic TLS certificates) and external-dns (automatic DNS records)."
-      - Helped build an OCR pipeline.
+      - "Helped build an OCR pipeline on Kubernetes that reads multilingual PDF documents."
+      - "Built its benchmarks: test documents with correct answers, and WER/CER scores that measure how accurate the OCR is."
+      - "Set up the local k3s deploy with an OCR smoke test, plus a mock ingester that sends in a test file every 30 seconds."
+      - "Added a resend tool that sends one page crop to the AI model again and saves every reply in PostgreSQL."
       - Test automation with agentic Playwright.
       - Building AI workflows.
 
@@ -109,6 +115,14 @@ design:
     end: 2019-01
     points:
       - Packaging design, layout, concept development and implementation for major brands such as Toblerone.
+
+# Volunteer work, newest first.
+volunteer:
+  - title: "Volunteer, Future Generations Shaping Future Technology"
+    org: Ungdomsbureauet
+    place: Copenhagen & Silicon Valley
+    start: 2022-11
+    end: 2023-07
 
 projects:
   - name: k3s Cluster

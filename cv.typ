@@ -31,6 +31,7 @@
   ("education", "Education"),
   ("courses", "Courses"),
   ("design", "Graphic design"),
+  ("volunteer", "Volunteering"),
 ).filter(((key, _)) => cv.at(key, default: ()).len() > 0)
 
 // Contact links as (label, href) pairs, skipping empty ones.
